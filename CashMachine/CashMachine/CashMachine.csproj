@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\Account.cs" />
     <Compile Include="Model\Checking.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Form1.cs">
