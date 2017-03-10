@@ -1,1 +1,2 @@
 c:\users\danie\documents\visual studio 2015\Projects\CashMachine\CashMachine\bin\Debug\CashMachine.exe.config
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\bin\Debug\CashMachine.exe.config
