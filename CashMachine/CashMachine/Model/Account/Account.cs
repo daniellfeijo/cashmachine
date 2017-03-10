@@ -1,31 +1,30 @@
-﻿// <copyright file="Checking.cs" company="daniellfeijo.com">
+﻿// <copyright file="Account.cs" company="daniellfeijo.com">
 //     daniellfeijo.com. All rights reserved.
 // </copyright>
 // <author>Daniel Feijo</author>
 namespace CashMachine.Model
-{ 
+{
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    using CashMachine.Interface;
     
     /// <summary>
-    /// The model class for Checking
+    /// The model for Account Class
     /// </summary>
-    public class Checking : Account
+    public class Account
     {
         /// <summary>
         /// Gets Number of the checking account
         /// </summary>
-        public int Numero { get; private set; }
-        
+        public int Number { get; private set; }
+
         /// <summary>
         /// Gets Balance of checking account
         /// </summary>
         public double Balance { get; private set; }
-        
+
         /// <summary>
         /// Gets Client of checking account
         /// </summary>

@@ -1,2 +1,8 @@
 c:\users\danie\documents\visual studio 2015\Projects\CashMachine\CashMachine\bin\Debug\CashMachine.exe.config
 C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\bin\Debug\CashMachine.exe.config
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\bin\Debug\CashMachine.exe
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\bin\Debug\CashMachine.pdb
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.Properties.Resources.resources
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.csproj.GenerateResource.Cache
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.exe
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.pdb

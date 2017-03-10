@@ -13,6 +13,11 @@ namespace CashMachine
         public string Id { get; set; }
         public string Adress { get; set; }
 
+        public Client(string name)
+        {
+            this.Name = name;
+        }
+
 
     }
 }
