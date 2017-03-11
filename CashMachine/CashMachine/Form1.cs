@@ -14,7 +14,8 @@ namespace CashMachine
 {
     public partial class Form1 : Form
     {
-        Account[] accounts;
+        List<Account> accounts;
+        private int totalAccounts = Account.TotalAccounts;
         public Form1()
         {
             InitializeComponent();
@@ -22,16 +23,18 @@ namespace CashMachine
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            accounts = new Account[2];
-            accounts[0] = new CheckingAccount();
+            accounts = new List<Account>();
+            Account c1 = new CheckingAccount();
             Client client1 = new Client("Daniel");
-            accounts[0].Client = client1;
-            accounts[0].Number = 1;
-            accounts[0].Deposit(300);
-            accounts[1] = new CheckingAccount();
+            c1.Client = client1;
+            c1.Number = 1;
+            c1.Deposit(300);
+            accounts.Add(c1);
+            Account c2 = new CheckingAccount();
             Client client2 = new Client("Eduardo");
-            accounts[1].Client = client2;
-            accounts[1].Number = 2;
+            c2.Client = client2;
+            c2.Number = 2;
+            accounts.Add(c2);
 
             foreach(Account account in accounts)
             {
@@ -80,6 +83,19 @@ namespace CashMachine
             {
                 MessageBox.Show("Invalid value!");
             }
+        }
+
+        public void AddAccount(Account account)
+        {
+            this.accounts.Add(account);
+            AccountCombo.Items.Add(account);
+            MessageBox.Show("Account Added!");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AccountRegistration registration = new AccountRegistration(this);
+            registration.ShowDialog();
         }
     }
 }

@@ -39,6 +39,7 @@
             this.WithdrawTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.WithdrawButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AccountCombo
@@ -109,7 +110,7 @@
             // 
             // WithdrawTextBox
             // 
-            this.WithdrawTextBox.Location = new System.Drawing.Point(129, 271);
+            this.WithdrawTextBox.Location = new System.Drawing.Point(129, 201);
             this.WithdrawTextBox.Name = "WithdrawTextBox";
             this.WithdrawTextBox.Size = new System.Drawing.Size(100, 20);
             this.WithdrawTextBox.TabIndex = 9;
@@ -117,7 +118,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 274);
+            this.label5.Location = new System.Drawing.Point(26, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 10;
@@ -125,7 +126,7 @@
             // 
             // WithdrawButton
             // 
-            this.WithdrawButton.Location = new System.Drawing.Point(249, 269);
+            this.WithdrawButton.Location = new System.Drawing.Point(249, 199);
             this.WithdrawButton.Name = "WithdrawButton";
             this.WithdrawButton.Size = new System.Drawing.Size(75, 23);
             this.WithdrawButton.TabIndex = 11;
@@ -133,11 +134,22 @@
             this.WithdrawButton.UseVisualStyleBackColor = true;
             this.WithdrawButton.Click += new System.EventHandler(this.WithdrawButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(129, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Add New Account";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 344);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.WithdrawButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.WithdrawTextBox);
@@ -170,6 +182,7 @@
         private System.Windows.Forms.TextBox WithdrawTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button WithdrawButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

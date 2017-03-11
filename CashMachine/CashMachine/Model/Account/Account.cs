@@ -16,6 +16,13 @@ namespace CashMachine.Model
     /// </summary>
     public abstract class Account
     {
+        public static int TotalAccounts { get; private set; }
+
+        public Account()
+        {
+            TotalAccounts += 1;
+        }
+
         /// <summary>
         /// Gets or sets Number of the checking account
         /// </summary>
@@ -55,17 +62,6 @@ namespace CashMachine.Model
         {
             this.Withdraw(value);
             account.Deposit(value);
-        }
-
-        /// <summary>
-        /// Overriding Object Method Equals
-        /// </summary>
-        /// <param name="obj">Account Object</param>
-        /// <returns>If has the same number</returns>
-        public override bool Equals(object obj)
-        {
-            Account account = (Account)obj;
-            return this.Number.Equals(account.Number);
         }
 
         /// <summary>
