@@ -35,7 +35,7 @@ namespace CashMachine
 
             foreach(Account account in accounts)
             {
-                AccountCombo.Items.Add(Convert.ToString(account.Number) + " - " + account.Client.Name);
+                AccountCombo.Items.Add(account.ToString());
             }
 
         }

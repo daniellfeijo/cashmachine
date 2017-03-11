@@ -56,5 +56,25 @@ namespace CashMachine.Model
             this.Withdraw(value);
             account.Deposit(value);
         }
+
+        /// <summary>
+        /// Overriding Object Method Equals
+        /// </summary>
+        /// <param name="obj">Account Object</param>
+        /// <returns>If has the same number</returns>
+        public override bool Equals(object obj)
+        {
+            Account account = (Account)obj;
+            return this.Number.Equals(account.Number);
+        }
+
+        /// <summary>
+        /// Overrinding Object Method ToString
+        /// </summary>
+        /// <returns>Number - Client Name</returns>
+        public override string ToString()
+        {
+            return this.Number + " - " + this.Client.Name;
+        }
     }
 }
