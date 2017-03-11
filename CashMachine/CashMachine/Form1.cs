@@ -22,11 +22,11 @@ namespace CashMachine
         private void Form1_Load(object sender, EventArgs e)
         {
             accounts = new Account[2];
-            accounts[0] = new Account();
+            accounts[0] = new CheckingAccount();
             Client client1 = new Client("Daniel");
             accounts[0].Client = client1;
             accounts[0].Number = 1;
-            accounts[1] = new Account();
+            accounts[1] = new SavingsAccount();
             Client client2 = new Client("Eduardo");
             accounts[1].Client = client2;
             accounts[1].Number = 2;

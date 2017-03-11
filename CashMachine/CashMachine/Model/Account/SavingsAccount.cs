@@ -9,6 +9,7 @@ namespace CashMachine.Model
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using System.Windows.Forms;
 
     /// <summary>
     /// Model of SavingsAccount
@@ -21,7 +22,14 @@ namespace CashMachine.Model
         /// <param name="value">Value for withdraw</param>
         public override void Withdraw(double value)
         {
-            this.Balance -= value + 0.1;
+            if (this.Balance < value)
+            {
+                MessageBox.Show("Value more than the Balance!");
+            }
+            else
+            {
+                this.Balance -= value + 0.01;
+            }
         }
     }
 }

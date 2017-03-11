@@ -14,7 +14,7 @@ namespace CashMachine.Model
     /// <summary>
     /// The model for Account Class
     /// </summary>
-    public class Account
+    public abstract class Account
     {
         /// <summary>
         /// Gets Number of the checking account
@@ -35,17 +35,7 @@ namespace CashMachine.Model
         /// Method to Withdraw the value
         /// </summary>
         /// <param name="value">Value for withdraw</param>
-        public virtual void Withdraw(double value)
-        {
-            if(this.Balance < value)
-            {
-                MessageBox.Show("Value more than the Balance!");
-            }else
-            {
-                this.Balance -= value;
-            }
-
-        }
+        public abstract void Withdraw(double value);
 
         /// <summary>
         /// Method to Deposit the value
