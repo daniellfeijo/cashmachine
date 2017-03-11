@@ -15,5 +15,13 @@ namespace CashMachine.Model
     /// </summary>
     class SavingsAccount : Account
     {
+        /// <summary>
+        /// Method to Withdraw the value
+        /// </summary>
+        /// <param name="value">Value for withdraw</param>
+        public override void Withdraw(double value)
+        {
+            this.Balance -= value + 0.1;
+        }
     }
 }

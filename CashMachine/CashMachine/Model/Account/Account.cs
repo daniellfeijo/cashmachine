@@ -9,7 +9,8 @@ namespace CashMachine.Model
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    
+    using System.Windows.Forms;
+
     /// <summary>
     /// The model for Account Class
     /// </summary>
@@ -18,25 +19,32 @@ namespace CashMachine.Model
         /// <summary>
         /// Gets Number of the checking account
         /// </summary>
-        public int Number { get; private set; }
+        public int Number { get; set; }
 
         /// <summary>
         /// Gets Balance of checking account
         /// </summary>
-        public double Balance { get; private set; }
+        public double Balance { get; protected set; }
 
         /// <summary>
         /// Gets Client of checking account
         /// </summary>
-        public Client Client { get; private set; }
+        public Client Client { get; set; }
 
         /// <summary>
         /// Method to Withdraw the value
         /// </summary>
         /// <param name="value">Value for withdraw</param>
-        public void Withdraw(double value)
+        public virtual void Withdraw(double value)
         {
-            this.Balance -= value;
+            if(this.Balance < value)
+            {
+                MessageBox.Show("Value more than the Balance!");
+            }else
+            {
+                this.Balance -= value;
+            }
+
         }
 
         /// <summary>

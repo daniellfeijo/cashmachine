@@ -6,3 +6,5 @@ C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\Ca
 C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.csproj.GenerateResource.Cache
 C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.exe
 C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.pdb
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.csprojResolveAssemblyReference.cache
+C:\Users\danie\Documents\GitHub\cashmachine\CashMachine\CashMachine\obj\Debug\CashMachine.Form1.resources
