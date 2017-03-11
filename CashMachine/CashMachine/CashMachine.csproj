@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\BalanceNotEnoughException.cs" />
     <Compile Include="Interface\Account\Taxable.cs" />
     <Compile Include="Model\Account\Account.cs" />
     <Compile Include="Model\Account\CheckingAccount.cs" />

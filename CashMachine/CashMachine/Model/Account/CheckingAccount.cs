@@ -4,6 +4,7 @@
 // <author>Daniel Feijo</author>
 namespace CashMachine.Model
 {
+    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -29,13 +30,18 @@ namespace CashMachine.Model
         /// <param name="value">Value for withdraw</param>
         public override void Withdraw(double value)
         {
-            if (this.Balance < value)
+            if(value <= 0)
             {
-                MessageBox.Show("Value more than the Balance!");
+                throw new ArgumentException();
+            }
+
+            if (this.Balance >= value)
+            {
+                this.Balance -= value;
             }
             else
             {
-                this.Balance -= value;
+                throw new BalanceNotEnoughException();
             }
         }
     }
