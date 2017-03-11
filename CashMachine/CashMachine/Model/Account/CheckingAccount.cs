@@ -16,6 +16,13 @@ namespace CashMachine.Model
     /// </summary>
     public class CheckingAccount : Account
     {
+        public static int TotalCheckingAccounts { get; private set; }
+
+        public CheckingAccount()
+        {
+            TotalCheckingAccounts += 1;
+        }
+
         /// <summary>
         /// Method to Withdraw the value
         /// </summary>

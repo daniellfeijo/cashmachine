@@ -26,7 +26,7 @@ namespace CashMachine
             Client client1 = new Client("Daniel");
             accounts[0].Client = client1;
             accounts[0].Number = 1;
-            accounts[1] = new SavingsAccount();
+            accounts[1] = new CheckingAccount();
             Client client2 = new Client("Eduardo");
             accounts[1].Client = client2;
             accounts[1].Number = 2;
@@ -35,8 +35,8 @@ namespace CashMachine
             {
                 AccountCombo.Items.Add(account.Client.Name);
             }
-            
 
+            MessageBox.Show(Convert.ToString(CheckingAccount.TotalCheckingAccounts));
 
         }
 

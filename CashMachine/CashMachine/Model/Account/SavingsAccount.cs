@@ -4,6 +4,7 @@
 // <author>Daniel Feijo</author>
 namespace CashMachine.Model
 {
+    using Interface.Account;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -14,7 +15,7 @@ namespace CashMachine.Model
     /// <summary>
     /// Model of SavingsAccount
     /// </summary>
-    class SavingsAccount : Account
+    class SavingsAccount : Account, Taxable
     {
         /// <summary>
         /// Method to Withdraw the value
@@ -30,6 +31,11 @@ namespace CashMachine.Model
             {
                 this.Balance -= value + 0.01;
             }
+        }
+
+        public double CalculateTribute()
+        {
+            return this.Balance * 0.01;
         }
     }
 }

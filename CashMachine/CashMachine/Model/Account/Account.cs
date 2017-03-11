@@ -17,17 +17,17 @@ namespace CashMachine.Model
     public abstract class Account
     {
         /// <summary>
-        /// Gets Number of the checking account
+        /// Gets or sets Number of the checking account
         /// </summary>
         public int Number { get; set; }
 
         /// <summary>
-        /// Gets Balance of checking account
+        /// Gets or sets Balance of checking account
         /// </summary>
         public double Balance { get; protected set; }
 
         /// <summary>
-        /// Gets Client of checking account
+        /// Gets or sets Client of checking account
         /// </summary>
         public Client Client { get; set; }
 
@@ -41,7 +41,7 @@ namespace CashMachine.Model
         /// Method to Deposit the value
         /// </summary>
         /// <param name="value">Value to deposit</param>
-        public void Deposit(double value)
+        public virtual void Deposit(double value)
         {
             this.Balance += value;
         }
