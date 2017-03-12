@@ -141,6 +141,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cashmachinedbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\ClientDAO.cs" />
     <Compile Include="EntitiesContext.cs" />
     <Compile Include="Exceptions\BalanceNotEnoughException.cs" />
     <Compile Include="Interface\Account\Taxable.cs" />

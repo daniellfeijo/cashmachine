@@ -1,4 +1,5 @@
-﻿using CashMachine.Model;
+﻿using CashMachine.DAO;
+using CashMachine.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,13 +30,16 @@ namespace CashMachine
             EntitiesContext context = new EntitiesContext();
 
             Client client = new Client(nameClient);
-            context.Clients.Add(client);
-            context.SaveChanges();
+            ClientDAO clientDAO = new ClientDAO(context);
+            clientDAO.save(client);
 
             Account account = new CheckingAccount(client);
             account.Number = accountNumber;
-            context.Accounts.Add(account);
-            context.SaveChanges();
+            AccountDAO accountDAO = new AccountDAO(context);
+            accountDAO.save(account);
+
+            context.Dispose();
+
 
             this.mainApplication.AddAccount(account);
 
