@@ -23,6 +23,22 @@ namespace CashMachine.DAO
             context.SaveChanges();
         }
 
+        public void Remove(Account account)
+        {
+            context.Accounts.Remove(account);
+            context.SaveChanges();
+        }
+
+        public void SaveChanges()
+        {
+            context.SaveChanges();
+        }
+
+        public Account FindById(int id)
+        {
+            return context.Accounts.FirstOrDefault(a => a.ID == id);
+        }
+
         public IList<Account> ListAll()
         {
             var research = from a in context.Accounts.Include(a=> a.Client ) select a;

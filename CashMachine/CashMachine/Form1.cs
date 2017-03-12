@@ -67,6 +67,11 @@ namespace CashMachine
             try
             {
                 account.Withdraw(Convert.ToDouble(WithdrawTextBox.Text));
+                EntitiesContext context = new EntitiesContext();
+                AccountDAO accountDAO = new AccountDAO(context);
+                Account accountDb = accountDAO.FindById(account.ID);
+                accountDb.Withdraw(Convert.ToDouble(WithdrawTextBox.Text));
+                accountDAO.SaveChanges();
                 MessageBox.Show("Success!");
                 BalanceText.Text = Convert.ToString(account.Balance);
                 WithdrawTextBox.Text = "";
