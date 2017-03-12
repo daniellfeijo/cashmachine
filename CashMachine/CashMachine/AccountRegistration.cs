@@ -26,10 +26,16 @@ namespace CashMachine
             string nameClient = clientNameTextBox.Text;
             int accountNumber = Convert.ToInt32(accountNumberTextBox.Text);
 
+            EntitiesContext context = new EntitiesContext();
+
             Client client = new Client(nameClient);
+            context.Clients.Add(client);
+            context.SaveChanges();
 
             Account account = new CheckingAccount(client);
             account.Number = accountNumber;
+            context.Accounts.Add(account);
+            context.SaveChanges();
 
             this.mainApplication.AddAccount(account);
 

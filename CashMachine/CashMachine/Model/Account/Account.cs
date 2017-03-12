@@ -37,7 +37,9 @@ namespace CashMachine.Model
         /// <summary>
         /// Gets or sets Client of checking account
         /// </summary>
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
+
+        public int ClientID { get; set; }
 
         /// <summary>
         /// Method to Withdraw the value

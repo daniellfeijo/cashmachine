@@ -1,4 +1,5 @@
 ﻿
+using CashMachine.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace CashMachine
         public int ID { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
+
+        public virtual IList<Account> accounts { get; set; }
 
         public Client(string name)
         {
