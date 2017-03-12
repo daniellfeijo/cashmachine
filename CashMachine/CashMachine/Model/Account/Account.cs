@@ -22,6 +22,8 @@ namespace CashMachine.Model
             this.Client = client;
         }
 
+        public int ID { get; set; }
+
         /// <summary>
         /// Gets or sets Number of the checking account
         /// </summary>

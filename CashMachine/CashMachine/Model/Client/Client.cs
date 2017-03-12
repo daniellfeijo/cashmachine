@@ -9,7 +9,7 @@ namespace CashMachine
 {
     public class Client
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
 
