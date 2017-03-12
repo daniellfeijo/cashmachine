@@ -10,9 +10,6 @@ namespace CashMachine.Model
 {
     public class InvestimentAccount : Account, Taxable
     {
-        public InvestimentAccount(Client client) : base(client)
-        {
-        }
 
         /// <summary>
         /// Method to Withdraw the value

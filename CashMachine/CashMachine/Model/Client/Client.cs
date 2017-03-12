@@ -16,11 +16,6 @@ namespace CashMachine
 
         public virtual IList<Account> accounts { get; set; }
 
-        public Client(string name)
-        {
-            this.Name = name;
-        }
-
 
     }
 }

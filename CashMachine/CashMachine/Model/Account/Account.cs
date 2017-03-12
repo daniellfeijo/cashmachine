@@ -17,11 +17,6 @@ namespace CashMachine.Model
     public abstract class Account
     {
 
-        public Account(Client client)
-        {
-            this.Client = client;
-        }
-
         public int ID { get; set; }
 
         /// <summary>
@@ -32,7 +27,7 @@ namespace CashMachine.Model
         /// <summary>
         /// Gets or sets Balance of checking account
         /// </summary>
-        public double Balance { get; protected set; }
+        public double Balance { get; set; }
 
         /// <summary>
         /// Gets or sets Client of checking account

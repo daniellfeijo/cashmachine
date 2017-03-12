@@ -29,11 +29,13 @@ namespace CashMachine
 
             EntitiesContext context = new EntitiesContext();
 
-            Client client = new Client(nameClient);
+            Client client = new Client();
+            client.Name = nameClient;
             ClientDAO clientDAO = new ClientDAO(context);
             clientDAO.save(client);
 
-            Account account = new CheckingAccount(client);
+            Account account = new CheckingAccount();
+            account.Client = client;
             account.Number = accountNumber;
             AccountDAO accountDAO = new AccountDAO(context);
             accountDAO.save(account);

@@ -1,4 +1,5 @@
 ﻿using CashMachine.Model;
+using Microsoft.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,13 @@ namespace CashMachine.DAO
         {
             context.Accounts.Add(account);
             context.SaveChanges();
+        }
+
+        public IList<Account> ListAll()
+        {
+            var research = from a in context.Accounts.Include(a=> a.Client ) select a;
+
+            return research.ToList();
         }
     }
 }
