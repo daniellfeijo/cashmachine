@@ -15,7 +15,7 @@ namespace CashMachine
     public partial class Form1 : Form
     {
         List<Account> accounts;
-        private int totalAccounts = Account.TotalAccounts;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,14 +24,14 @@ namespace CashMachine
         private void Form1_Load(object sender, EventArgs e)
         {
             accounts = new List<Account>();
-            Account c1 = new CheckingAccount();
             Client client1 = new Client("Daniel");
+            Account c1 = new CheckingAccount(client1);
             c1.Client = client1;
             c1.Number = 1;
             c1.Deposit(300);
             accounts.Add(c1);
-            Account c2 = new CheckingAccount();
             Client client2 = new Client("Eduardo");
+            Account c2 = new CheckingAccount(client2);
             c2.Client = client2;
             c2.Number = 2;
             accounts.Add(c2);

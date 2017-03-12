@@ -17,6 +17,10 @@ namespace CashMachine.Model
     /// </summary>
     public class CheckingAccount : Account
     {
+        public CheckingAccount(Client client) : base(client)
+        {
+        }
+
         /// <summary>
         /// Method to Withdraw the value
         /// </summary>

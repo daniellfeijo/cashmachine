@@ -15,8 +15,12 @@ namespace CashMachine.Model
     /// <summary>
     /// Model of SavingsAccount
     /// </summary>
-    class SavingsAccount : Account, Taxable
+    public class SavingsAccount : Account, Taxable
     {
+        public SavingsAccount(Client client) : base(client)
+        {
+        }
+
         /// <summary>
         /// Method to Withdraw the value
         /// </summary>

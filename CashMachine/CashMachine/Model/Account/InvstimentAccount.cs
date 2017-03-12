@@ -8,8 +8,12 @@ using System.Windows.Forms;
 
 namespace CashMachine.Model
 {
-    class InvstimentAccount : Account, Taxable
+    public class InvestimentAccount : Account, Taxable
     {
+        public InvestimentAccount(Client client) : base(client)
+        {
+        }
+
         /// <summary>
         /// Method to Withdraw the value
         /// </summary>

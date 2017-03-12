@@ -16,11 +16,10 @@ namespace CashMachine.Model
     /// </summary>
     public abstract class Account
     {
-        public static int TotalAccounts { get; private set; }
 
-        public Account()
+        public Account(Client client)
         {
-            TotalAccounts += 1;
+            this.Client = client;
         }
 
         /// <summary>

@@ -28,8 +28,7 @@ namespace CashMachine
 
             Client client = new Client(nameClient);
 
-            Account account = new CheckingAccount();
-            account.Client = client;
+            Account account = new CheckingAccount(client);
             account.Number = accountNumber;
 
             this.mainApplication.AddAccount(account);
