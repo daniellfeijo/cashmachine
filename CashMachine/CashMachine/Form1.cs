@@ -75,10 +75,10 @@ namespace CashMachine
                 MessageBox.Show("Success!");
                 BalanceText.Text = Convert.ToString(account.Balance);
                 WithdrawTextBox.Text = "";
-            } catch (BalanceNotEnoughException exception)
+            } catch (BalanceNotEnoughException)
             {
                 MessageBox.Show("Balance is not enough!");
-            }catch (ArgumentException exception)
+            }catch (ArgumentException)
             {
                 MessageBox.Show("Invalid value!");
             }

@@ -4,27 +4,26 @@
 // <author>Daniel Feijo</author>
 namespace CashMachine.Model
 {
-    using Exceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
     using System.Windows.Forms;
+    using Exceptions;
 
     /// <summary>
     /// The model class for Checking
     /// </summary>
     public class CheckingAccount : Account
     {
-
         /// <summary>
         /// Method to Withdraw the value
         /// </summary>
         /// <param name="value">Value for withdraw</param>
         public override void Withdraw(double value)
         {
-            if(value <= 0)
+            if (value <= 0)
             {
                 throw new ArgumentException();
             }
